@@ -1,0 +1,23 @@
+.list { display:flex; flex-direction:column; }
+
+.item {
+  display:flex; align-items:flex-start; gap:14px;
+  padding:16px 20px;
+  border-bottom:1px solid var(--color-border);
+  transition:background var(--transition);
+}
+.item:last-child { border-bottom:none; }
+.item:hover { background:rgba(255,255,255,0.02); }
+.unread { background:rgba(99,102,241,0.04); }
+
+.dot { width:8px; height:8px; border-radius:50%; background:var(--color-text3); flex-shrink:0; margin-top:6px; }
+.dotActive { background:var(--color-accent); box-shadow:0 0 8px rgba(99,102,241,0.6); }
+
+.content { flex:1; min-width:0; }
+.subject { font-size:14px; font-weight:600; color:var(--color-text); margin-bottom:4px; }
+.body    { font-size:13px; color:var(--color-text2); line-height:1.5; }
+.time    { font-size:11px; color:var(--color-text3); margin-top:6px; }
+
+.itemActions { display:flex; gap:4px; flex-shrink:0; }
+
+.skNotif { height:68px; margin:4px 20px; }

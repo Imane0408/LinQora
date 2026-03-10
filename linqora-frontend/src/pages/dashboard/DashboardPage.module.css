@@ -1,0 +1,43 @@
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+@media (max-width: 1024px) { .statsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .statsGrid { grid-template-columns: 1fr; } }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+.chartCard { grid-column: 1; }
+
+.eventList { display: flex; flex-direction: column; }
+
+.eventRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: all var(--transition);
+  border-radius: var(--radius-sm);
+}
+.eventRow:last-child { border-bottom: none; }
+.eventRow:hover { padding-left: 6px; }
+
+.eventDot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+.eventInfo { flex: 1; min-width: 0; }
+.eventTitle { font-size: 14px; font-weight: 500; color: var(--color-text); display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.eventDate  { font-size: 12px; color: var(--color-text3); }
+
+.skEvent { height: 44px; margin-bottom: 4px; }

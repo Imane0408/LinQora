@@ -1,0 +1,83 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+
+.scanArea { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+
+.qrIcon { color: var(--color-accent); opacity: 0.5; }
+
+.modeToggle {
+  display: flex;
+  gap: 4px;
+  background: var(--color-surface2);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  width: 100%;
+}
+.modeBtn {
+  flex: 1;
+  height: 36px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--color-text2);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.modeBtn.active {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--shadow-accent);
+}
+
+.inputGroup { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+
+/* Résultat */
+.result { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 10px; text-align: center; }
+.success { }
+.warning { }
+.danger  { }
+
+.resultMsg { font-size: 16px; font-weight: 600; color: var(--color-text); }
+
+.participantCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--color-surface2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  width: 100%;
+}
+.pAvatar {
+  width: 42px; height: 42px;
+  background: linear-gradient(135deg, var(--color-accent), #a855f7);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; color: #fff;
+  flex-shrink: 0;
+}
+.pName { font-size: 15px; font-weight: 600; color: var(--color-text); }
+.pOrg  { font-size: 13px; color: var(--color-text3); margin-top: 2px; }
+
+.timeStamp { font-size: 14px; color: var(--color-text2); background: var(--color-surface2); padding: 8px 16px; border-radius: var(--radius-sm); }
+
+.ateliers { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+.ateliers p { font-size: 13px; color: var(--color-text2); }
+.atelierTag {
+  background: var(--color-accent-bg);
+  color: var(--color-accent2);
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(99,102,241,0.2);
+}
+
+.emptyResult { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 40px; color: var(--color-text3); font-size: 14px; text-align: center; }
+.qrPlaceholder { opacity: 0.15; }

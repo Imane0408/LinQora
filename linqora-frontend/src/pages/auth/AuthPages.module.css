@@ -1,0 +1,22 @@
+.wrap { display: flex; flex-direction: column; gap: 20px; }
+
+.heading h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+.heading p { font-size: 14px; color: var(--color-text2); }
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.link {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text2);
+}
+.link a { color: var(--color-accent2); font-weight: 600; }
+.link a:hover { text-decoration: underline; }

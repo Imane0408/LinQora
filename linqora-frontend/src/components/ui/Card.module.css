@@ -1,0 +1,27 @@
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.glass {
+  background: rgba(17,20,32,0.7);
+  backdrop-filter: blur(16px);
+  border-color: var(--color-border2);
+}
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 24px 0;
+}
+.title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.subtitle { font-size: 13px; color: var(--color-text2); margin-top: 3px; }
+.action { flex-shrink: 0; }
+.body { padding: 20px 24px; }

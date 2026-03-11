@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     /** POST /api/auth/login */
+    
     public function login(LoginRequest $request): JsonResponse
     {
         $utilisateur = Utilisateur::with(['role', 'entreprise'])

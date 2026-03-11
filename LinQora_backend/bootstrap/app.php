@@ -20,6 +20,10 @@ return Application::configure(basePath: dirname(__DIR__))
 
         // Sanctum stateful pour le frontend React
         $middleware->statefulApi();
+    
+         $middleware->validateCsrfTokens(except: [
+          'api/*',
+    ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         // 401 — Non authentifié
